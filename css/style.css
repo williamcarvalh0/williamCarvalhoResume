@@ -32,6 +32,9 @@ nav {
     background-color:#655c56;
     font-size: 25px;
     color: #effcef;
+    /*make sure the nav is the top stack later*/
+    z-index: 100;
+    position: relative;
 }
 
 .nav-links {
@@ -113,13 +116,17 @@ nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
 }
 
 .middle {
     position: absolute;
-    top: 50%;
-    left: 47%;
+    /* top: 50%; */
+    left: 50%;
     transform: translate(-50%, -47%);
+    margin-top: -70%;
 }
 
 .myself-box {
@@ -130,14 +137,20 @@ nav {
 
 .front, .back {
     width: 100%;
-    height: 100%;
     backface-visibility: hidden;
-    position: absolute;
+    /* position: absolute; */
     transition: transform .6s linear;
+}
+
+.front {
+    height: 100%;
+    margin-left: -10%;
 }
 
 .front img {
     height: 100%;
+    margin-left: -10%;
+    z-index: -1;
 }
 
 .front {
@@ -160,8 +173,6 @@ nav {
 .myself-box:hover > .back {
     transform: perspective(600px) rotateY(0deg);
 }
-
-
 /* ###########################   end myself content   ###########################  */
 
 
@@ -348,18 +359,449 @@ nav {
 
     /* -------------------------  start nav bar content  ------------------------- */
     .nav-links {
-        position: absolute !important;
+        /* make the nav bar sticky */
+        position: fixed !important;
         right: 0px;
-        height: 92vh;
-        top: 8vh;
+        height: 100%;
+        top: 0;
         background-color:#655c56;
-        display: flex;
+        /* display: flex; */
         flex-direction: column;
         align-items: center;
-        width: 30%;
+        width: 50%;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
-        opacity: 0.9;
+       
+    }
+
+    .nav-links li {
+        opacity: 0;
+    }
+
+    .burger {
+        display: block;
+    }
+    /* -------------------------  end nav bar content  ------------------------- */
+
+
+    /* -------------------------  start myself content  ------------------------- */
+    .middle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .back-content {
+        text-align: center;
+        width: 100%;        
+    }
+    /* -------------------------  end myself content  ------------------------- */
+
+
+
+    /* -------------------------  start experience content  ------------------------- */
+    .service-box {
+        max-width: 100%;
+    }
+    /* -------------------------  end experience content  ------------------------- */
+
+
+
+    /* -------------------------  start contact content  ------------------------- */
+    .contact-box {
+        max-width: 100%;
+    }
+    /* -------------------------  end contact content  ------------------------- */   
+}
+
+.nav-active {
+    transform: translateX(0%); 
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    font-family: 'Gloria Hallelujah', cursive; 
+    background: #effcef;
+}
+
+
+#mainLogo {    
+    width: 90px;
+    border-radius: 40%;
+    margin-top: 10px;
+}
+
+#name {
+    color: #effcef;
+    text-decoration: none;
+    border: #effcef;
+}
+
+/* ###########################   start nav bar content   ###########################  */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    font-family: 'Gloria Hallelujah', cursive;
+    background-color:#655c56;
+    font-size: 25px;
+    color: #effcef;
+    /*make sure the nav is the top stack later*/
+    z-index: 100;
+    position: relative;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 35%;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a{
+    color: #effcef;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 5px;
+    background-color: #effcef;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-8px,6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-8px,-6px); 
+}
+
+/* ###########################   end nav bar content   ###########################  */
+
+
+
+/* ###########################   start myself content   ###########################  */
+.myself-section {  
+    background-size: cover;
+    padding: 60px 0;
+}
+
+.myself-inner-width {
+    width: 100%;
+    max-width: 1920px;
+    margin: auto;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+.myself-section-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 27px;
+    transform: scale(1.6);
+}
+
+.myself-border {
+    width: 600px;
+    height: 2px;
+    background: #235952;
+    margin: 30px auto;
+}
+
+.myself-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.middle {
+    position: absolute;
+    /* top: 50%; */
+    left: 50%;
+    transform: translate(-50%, -47%);
+    margin-top: -70%;
+}
+
+.myself-box {
+    cursor: pointer;
+    width: 340px;
+    height: 480px;    
+}
+
+.front, .back {
+    width: 100%;
+    backface-visibility: hidden;
+    /* position: absolute; */
+    transition: transform .6s linear;
+}
+
+.front {
+    height: 100%;
+    margin-left: -10%;
+}
+
+.front img {
+    height: 100%;
+    margin-left: -10%;
+    z-index: -1;
+}
+
+.front {
+    transform: perspective(600px) rotateY(0deg);
+}
+
+.back {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.back-content {
+    text-align: center;
+    width: 100%;
+}
+
+.myself-box:hover > .front {
+    transform: perspective(600px) rotateY(-180deg);
+}
+
+.myself-box:hover > .back {
+    transform: perspective(600px) rotateY(0deg);
+}
+/* ###########################   end myself content   ###########################  */
+
+
+
+/* ###########################   start experience content   ###########################  */
+.services-section {  
+    background-size: cover;
+    padding: 60px 0;
+}
+
+.services-inner-width {
+    width: 100%;
+    max-width: 1920px;
+    margin: auto;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+.services-section-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 27px;
+    transform: scale(1.6);
+}
+
+.services-border {
+    width: 600px;
+    height: 2px;
+    background: #235952;
+    margin: 30px auto;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.service-box {
+    max-width: 50%;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.service-icon {
+    display: inline-block;
+    width: 170px;
+    height: 170px;
+    border: 3px solid #235952;
+    transform: rotate(45deg);
+    margin-bottom: 30px;
+    margin-top: 16px;
+    transition: 0.3s linear;
+}
+
+.service-icon img {
+    transform: rotate(-45deg);
+}
+
+.service-box:hover .service-icon {
+    background: #235952;
+    color: #ddd;
+    transform: scale(1.6);
+}
+
+.service-title {
+    font-weight: bold;
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.service-desc {
+    font-size: 14px;
+    margin-bottom: 35px;
+}
+/* ###########################   end experience content   ###########################  */
+
+
+
+/* ###########################   start contact content   ###########################  */
+.contact-section {  
+    background-size: cover;
+    padding: 60px 0;
+}
+
+.contact-inner-width {
+    width: 100%;
+    max-width: 1920px;
+    margin: auto;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+.contact-section-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 27px;
+    transform: scale(1.6);
+}
+
+.contact-border {
+    width: 600px;
+    height: 2px;
+    background: #235952;
+    margin: 30px auto;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact-box {
+    max-width: 50%;
+    padding: 60px;
+    margin: 20px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.contact-icon {
+    font-size: 28px;
+    background: #655c56;
+    width: 170px;
+    height: 170px;
+    text-align: center;
+    line-height: 170px !important;
+    border-radius: 50%;
+    transition: 0.3s linear;
+}
+
+.contact-box:hover  .contact-icon {
+    background: none;
+    color: #655c56;
+    transform: scale(1.6);
+}
+
+.contact-title {
+    font-weight: bold;
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.contact-desc {
+    margin-top: 20px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    max-height: 0;
+    opacity: 0;
+    transition: 0.3s linear;
+}
+
+.contact-box:hover .contact-desc{
+    font-size: 25px;
+    opacity: 1;
+}
+/* ###########################   end contact content   ###########################  */
+
+
+/* ###########################   start  1024px resposive content   ###########################  */
+@media screen and (max-width:1024px) {
+    .nav-links {
+        width: 60%;
+    }
+}
+
+
+
+/* ###########################   start  768px resposive content   ###########################  */
+@media screen and (max-width:768px) {
+    body {
+     overflow-x: hidden;
+    }
+
+    /* -------------------------  start nav bar content  ------------------------- */
+    .nav-links {
+        /* make the nav bar sticky */
+        position: fixed !important;
+        right: 0px;
+        height: 100%;
+        top: 0;
+        background-color:#655c56;
+        /* display: flex; */
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+       
     }
 
     .nav-links li {
