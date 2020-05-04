@@ -23,35 +23,57 @@ body {
 }
 
 
-/* ###########################   start preload content   ###########################  */
-.preload {
-    position: fixed;   
-    transition: opacity 8s ease;
-    background: #655c56;
+/* ###########################   start home page content   ###########################  */
+.home-animation {
+    position: fixed;
     width: 100%;
-    height: 100%;
-}
-
-.preload img {
+    height: 100vh;;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+}
+
+.img1, .img2, .img3 {
+    height: 100px;
     position: absolute;
-    left: 50%;
-    top: 50%;
 }
 
-.loadImage {
-    animation: loadImage 1s ease infinite alternate;
+.img1 {
+    top: 0%;
+    transform: translate(-0);
+    animation: images 7s ease infinite;
 }
 
-
-.preload-finish {
-    opacity: 0;
-    pointer-events: none;
+.img2 {
+    top: 10%;
+    animation: images 10s ease infinite 2s;
 }
 
-@keyframes loadImage {
+.img3 {
+    top: 25%;
+    animation: images 4s ease infinite 1s;
+}
+
+.home-image {
+    height: 350px;
+    animation: home-image 1s ease infinite alternate;
+}
+
+.home-animation h1 {
+    position: absolute;
+    top: 72%;
+    transform: translateY(-72%);
+    font-size: 60px;
+}
+
+.home-animation h3 {
+    position: absolute;
+    top: 77%;
+    transform: translateY(-77%);
+    font-size: 30px;
+}
+
+@keyframes home-image {
     from {
         transform: translateY(0px);
     } to {
@@ -59,9 +81,20 @@ body {
     }
 }
 
+@keyframes images {
+    from {
+        right: 0%;
+    } to {
+        right: 130%;
+    }
+}
 
-/* ###########################   end preload content   ###########################  */
-
+/* ###########################   end home page content   ###########################  */
+.homePage h2 {
+    position: absolute;
+    left: 90%;
+    top: 20%;
+}
 
 
 /* ###########################   start social media content   ###########################  */
@@ -169,6 +202,8 @@ nav {
 .toggle .line3 {
     transform: rotate(45deg) translate(-8px,-6px); 
 }
+
+
 
 /* ###########################   end nav bar content   ###########################  */
 
@@ -430,12 +465,45 @@ nav {
 /* ###########################   end contact content   ###########################  */
 
 
+
+/* ###########################   start  1280px resposive content   ###########################  */
+@media screen and (max-width:1280px) {
+    .home-box {
+        width: 40%;
+        height: 40%;
+        margin: 0 auto 0 auto;
+      }
+      
+      .home-text {
+          position: absolute;
+          top: 20%;
+          margin-left: 560px;
+      }
+      
+      .home-text h1 {
+          font-size: 40px;
+      }
+
+}
+/* ###########################   end 1024px resposive content   ###########################  */
+
+
+
 /* ###########################   start  1024px resposive content   ###########################  */
 @media screen and (max-width:1024px) {
     .nav-links {
         width: 60%;
     }
+
+   
+    .home-text h1 {
+        position: absolute;
+        top: 50%;
+        font-size: 40px;
+    }
+
 }
+/* ###########################   end 1024px resposive content   ###########################  */
 
 
 
@@ -500,6 +568,9 @@ nav {
     }
     /* -------------------------  end contact content  ------------------------- */   
 }
+/* ###########################   end  528px resposive content   ###########################  */
+
+
 
 .nav-active {
     transform: translateX(0%); 
@@ -515,4 +586,3 @@ nav {
         transform: translateX(0px);
     }
 }
-
