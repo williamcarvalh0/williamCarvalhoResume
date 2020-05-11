@@ -293,6 +293,8 @@ nav {
 .back-content {
     text-align: center;
     width: 100%;
+    color: none;
+    background: none;
 }
 
 .myself-box:hover > .front {
