@@ -578,7 +578,50 @@ nav {
 }
 /* ###########################   end  528px resposive content   ###########################  */
 
+/* ###########################  start footer content   ###########################  */
+    /*start footer*/
+.copyright {
+   text-align: center;
+   background-color: #655c56;
+   color: #fff;
+   padding: 10px;
+   bottom: 0;
+   width: 100%;
+   position: fixed;
+}
 
+.up {
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    background: url("../images/connection.png") no-repeat center #effcef;
+    top: -2.5rem;
+    right: 5rem;
+    border-radius: 100%;
+    display: flex;
+    animation: pulse 2s infinite;
+    cursor: pointer;	
+} 
+
+
+.copyright p {
+    font-size: 1.4rem;
+}
+/*end footer*/
+
+/*start animations*/
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 #655c56;
+    } 70% {
+        box-shadow: 0 0 0 2rem #655c56;
+    } 100% {
+        box-shadow: 0 0 0 0 #655c56;
+    }
+}
+/*end animations*/
+
+/* ###########################  end footer content   ###########################  */
 
 .nav-active {
     transform: translateX(0%); 
