@@ -604,6 +604,68 @@ nav {
     /* -------------------------  end nav bar content  ------------------------- */
 
 
+    /* -------------------------  start home content  ------------------------- */
+    .img1, .img2, .img3 {
+    height: 100px;
+    position: absolute;
+}
+
+.img1 {
+    top: 0%;
+    transform: translate(-0);
+    animation: images 7s ease infinite;
+}
+
+.img2 {
+    top: 10%;
+    animation: images 10s ease infinite 2s;
+}
+
+.img3 {
+    top: 25%;
+    animation: images 5s ease infinite 1s;
+}
+
+.home-image {
+    height: 350px;
+    animation: home-image 2s ease infinite alternate;
+}
+
+.home-animation h1 {
+    position: absolute;
+    top: 82%;
+    transform: translateY(-82%);
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.home-animation h3 {
+    position: absolute;
+    top: 87%;
+    transform: translateY(-87%);
+    font-size: 30px;
+    margin-top: 15px;
+}
+
+@keyframes home-image {
+    from {
+        transform: translateY(0px);
+    } to {
+        transform: translateY(50px);
+    }
+}
+
+@keyframes images {
+    from {
+        right: 0%;
+    } to {
+        right: 130%;
+    }
+}
+
+    /* -------------------------  end home content  ------------------------- */
+
+
     /* -------------------------  start myself content  ------------------------- */
     .middle {
         position: absolute;
