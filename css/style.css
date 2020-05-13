@@ -589,7 +589,7 @@ nav {
         background-color:#655c56;
         flex-direction: column;
         align-items: center;
-        width: 25%;
+        width: 30%;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;       
     }
@@ -633,6 +633,35 @@ nav {
         max-width: 100%;
     }
     /* -------------------------  end contact content  ------------------------- */   
+
+
+    .copyright {
+        text-align: center;
+        background-color: #655c56;
+        color: #fff;
+        padding: 5px;
+        bottom: 0;
+        width: 100%;
+        position: fixed;
+    }
+
+    .up {
+        position: absolute;
+        width: 2rem;
+        height: 2rem;
+        background: url("../images/connection.png") no-repeat center #effcef;
+        top: -2.5rem;
+        right: 2rem;
+        border-radius: 100%;
+        display: flex;
+        animation: pulse 2s infinite;
+        cursor: pointer;	
+    } 
+
+
+    .copyright p {
+        font-size: 1.1rem;
+    }
 }
 /* ###########################   end  480px resposive content   ###########################  */
 
