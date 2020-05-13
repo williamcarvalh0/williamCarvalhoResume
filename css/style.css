@@ -14,6 +14,7 @@ body {
     width: 90px;
     margin-top: 10px;
     transition-duration: 2500ms;
+    cursor: pointer;
 }
 
 #mainLogo:hover {
@@ -541,9 +542,13 @@ nav {
 
 
     /* -------------------------  start experience content  ------------------------- */
+
+    
     .service-box {
         max-width: 100%;
     }
+
+    
     /* -------------------------  end experience content  ------------------------- */
 
 
@@ -552,6 +557,8 @@ nav {
     .contact-box {
         max-width: 100%;
     }
+
+ 
 
 .home-image {
     height: 300px;
@@ -721,6 +728,24 @@ nav {
     opacity: 1;
 }
 
+.up {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    background: url("../images/connection.png") no-repeat center #effcef;
+    top: -2.5rem;
+    right: 2rem;
+    border-radius: 100%;
+    display: flex;
+    animation: pulse 2s infinite;
+    cursor: pointer;	
+} 
+
+
+.copyright p {
+    font-size: 1.4rem;
+}
+
 @keyframes home-image {
     from {
         transform: translateY(0px);
@@ -760,6 +785,18 @@ nav {
 
 
     /* -------------------------  start experience content  ------------------------- */
+    .services-section-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 23px;
+    transform: scale(1.6);
+}
+
+.service-desc {
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
     .service-box {
         max-width: 100%;
     }
@@ -768,16 +805,45 @@ nav {
 
 
     /* -------------------------  start contact content  ------------------------- */
+   .contact-section-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 23px;
+    transform: scale(1.6);
+}
+
     .contact-box {
         max-width: 100%;
-        margin: 10px
+        margin: 10px;       
     }
     /* -------------------------  end contact content  ------------------------- */   
 
     .copyright p {
         font-size: 1.1rem;
         text-align: left;
+        margin-left: 5px
     }
+
+    .social-box h1 {
+    position: absolute;
+    top: 79%;
+    left: 50%;
+    padding: 0;
+    margin: 0;
+    transform: translate(-50%, -50%);
+}
+
+.social-box ul {
+    position: absolute;
+    top: 83%;
+    left: 50%;
+    padding: 10px;
+    margin: 10px;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+
+
 }
 /* ###########################   end  600px resposive content   ###########################  */
 
