@@ -143,10 +143,6 @@ body {
 .social-box ul li a:hover {
     transform: translate(0, -15px);
 }
-
-
-
-
 /* ###########################   end social media content   ###########################  */
 
 
@@ -208,9 +204,6 @@ nav {
 .toggle .line3 {
     transform: rotate(45deg) translate(-8px,-6px); 
 }
-
-
-
 /* ###########################   end nav bar content   ###########################  */
 
 
@@ -493,7 +486,7 @@ nav {
       }
 
 }
-/* ###########################   end 1024px resposive content   ###########################  */
+/* ###########################   end 1280px resposive content   ###########################  */
 
 
 
@@ -515,7 +508,7 @@ nav {
 
 
 
-/* ###########################   start  528px resposive content   ###########################  */
+/* ###########################   start  768px resposive content   ###########################  */
 @media screen and (max-width:768px) {
     body {
      overflow-x: hidden;
@@ -576,7 +569,72 @@ nav {
     }
     /* -------------------------  end contact content  ------------------------- */   
 }
-/* ###########################   end  528px resposive content   ###########################  */
+/* ###########################   end  768px resposive content   ###########################  */
+
+
+
+/* ###########################   start  480px resposive content   ###########################  */
+@media screen and (max-width:480px) {
+    body {
+     overflow-x: hidden;
+    }
+
+    /* -------------------------  start nav bar content  ------------------------- */
+    .nav-links {
+        /* make the nav bar sticky */
+        position: fixed !important;
+        right: 0px;
+        height: 100%;
+        top: 0;
+        background-color:#655c56;
+        flex-direction: column;
+        align-items: center;
+        width: 25%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;       
+    }
+
+    .nav-links li {
+        opacity: 0;
+    }
+
+    .burger {
+        display: block;
+    }
+    /* -------------------------  end nav bar content  ------------------------- */
+
+
+    /* -------------------------  start myself content  ------------------------- */
+    .middle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .back-content {
+        text-align: center;
+        width: 100%;        
+    }
+    /* -------------------------  end myself content  ------------------------- */
+
+
+
+    /* -------------------------  start experience content  ------------------------- */
+    .service-box {
+        max-width: 100%;
+    }
+    /* -------------------------  end experience content  ------------------------- */
+
+
+
+    /* -------------------------  start contact content  ------------------------- */
+    .contact-box {
+        max-width: 100%;
+    }
+    /* -------------------------  end contact content  ------------------------- */   
+}
+/* ###########################   end  480px resposive content   ###########################  */
 
 /* ###########################  start footer content   ###########################  */
     /*start footer*/
