@@ -711,7 +711,7 @@ nav {
     position: absolute;
     top: 70%;
     transform: translateY(-82%);
-    font-size: 30px;
+    font-size: 20px;
     margin-top: 20px;
 }
 
@@ -719,7 +719,7 @@ nav {
     position: absolute;
     top: 75%;
     transform: translateY(-87%);
-    font-size: 30px;
+    font-size: 20px;
     margin-top: 15px;
 }
 
@@ -967,20 +967,20 @@ nav {
     position: absolute;
     top: 70%;
     transform: translateY(-82%);
-    font-size: 30px;
-    margin-top: 20px;
+    font-size: 20px;
+    margin-top: 10px;
 }
 
 .home-animation h3 {
     position: absolute;
     top: 75%;
     transform: translateY(-87%);
-    font-size: 30px;
+    font-size: 20px;
     margin-top: 15px;
 }
 
 .contact-box:hover .contact-desc{
-    font-size: 20px;
+    font-size: 10px;
     opacity: 1;
 }
 
@@ -1074,20 +1074,6 @@ nav {
     }
     /* -------------------------  end contact content  ------------------------- */   
 
-    .copyright p {
-        font-size: 1.1rem;
-        text-align: left;
-        margin-left: 5px
-    }
-
-    .social-box h1 {
-    position: absolute;
-    top: 79%;
-    left: 50%;
-    padding: 0;
-    margin: 0;
-    transform: translate(-50%, -50%);
-}
 
 .social-box ul {
     position: absolute;
@@ -1097,6 +1083,65 @@ nav {
     margin: 10px;
     transform: translate(-50%, -50%);
     display: flex;
+}
+
+  /*start footer*/
+.copyright {
+   text-align: center;
+   background-color: #655c56;
+   color: #fff;
+   padding: 5px;
+   bottom: 0;
+   width: 100%;
+   position: fixed;
+}
+
+.up {
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    background: url("../images/connection.png") no-repeat center #effcef;
+    top: -2.5rem;
+    right: 2rem;
+    border-radius: 100%;
+    display: flex;
+    animation: pulse 2s infinite;
+    cursor: pointer;	
+} 
+
+
+.copyright p {
+    font-size: 1rem;
+}
+/*end footer*/
+
+/*start animations*/
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 #655c56;
+    } 70% {
+        box-shadow: 0 0 0 2rem #655c56;
+    } 100% {
+        box-shadow: 0 0 0 0 #655c56;
+    }
+}
+/*end animations*/
+
+/* ###########################  end footer content   ###########################  */
+
+.nav-active {
+    transform: translateX(0%); 
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
 }
 
 
